@@ -12,12 +12,12 @@ def download(patch, path):
   data = version.get_patch(patch)
   click.echo('cdragon patch to be used: ' + data['cdragon'])
   click.echo('ddragon patch to be used: ' + data['ddragon'])
-  # util.create_clean_dir(os.path.join(path, 'ddragon', data['ddragon']))
-  # util.create_clean_dir(os.path.join(path, 'cdragon', data['cdragon']))
+  util.create_clean_dir(os.path.join(path, 'ddragon', data['ddragon']))
+  util.create_clean_dir(os.path.join(path, 'cdragon', data['cdragon']))
 
   # downloading assets
-  # click.echo('downloading ddragon dragontail and extracting assets...')
-  # download_ddragon_assets(data['ddragon'], data['cdragon'], path)
+  click.echo('downloading ddragon dragontail and extracting assets...')
+  download_ddragon_assets(data['ddragon'], data['cdragon'], path)
   click.echo('downloading cdragon versioned assets...')
   download_cdragon_assets(data['cdragon'], path)
 
@@ -47,17 +47,17 @@ def download_cdragon_assets(patch, path):
   """
   downloads assets from CommunityDragon
   """
-  # download_cdragon_versioned_champion_squares(patch, path)
-  # download_cdragon_versioned_item_icons(patch, path)
-  # download_cdragon_versioned_minimaps(patch, path)
-  # download_cdragon_versioned_missions(patch, path)
-  # download_cdragon_versioned_profile_icons(patch, path)
-  # download_cdragon_versioned_champion_passives(patch, path)
-  # download_cdragon_versioned_champion_spells(patch, path)
-  # download_cdragon_champion_loading_portraits(patch, path)
-  # download_cdragon_champion_splash_arts(patch, path)
-  # download_cdragon_champion_tiles(patch, path)
-  # download_cdragon_perks(patch, path)
+  download_cdragon_versioned_champion_squares(patch, path)
+  download_cdragon_versioned_item_icons(patch, path)
+  download_cdragon_versioned_minimaps(patch, path)
+  download_cdragon_versioned_missions(patch, path)
+  download_cdragon_versioned_profile_icons(patch, path)
+  download_cdragon_versioned_champion_passives(patch, path)
+  download_cdragon_versioned_champion_spells(patch, path)
+  download_cdragon_champion_loading_portraits(patch, path)
+  download_cdragon_champion_splash_arts(patch, path)
+  download_cdragon_champion_tiles(patch, path)
+  download_cdragon_perks(patch, path)
   download_cdragon_data(patch, path)
   
 
